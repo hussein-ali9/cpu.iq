@@ -1,0 +1,113 @@
+:root {
+  --first-hue: 358.89deg;
+  --sat: 71.09%;
+  --lig: 45.29%;
+  --second-hue: 219;
+  --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
+  --first-color-alt: hsl(var(--first-hue), var(--sat), 71%);
+  /* -4% */
+  --title-color: hsl(var(--second-hue), 15%, 95%);
+  --text-color: hsl(var(--second-hue), 8%, 75%);
+  --text-color-light: hsl(var(--second-hue), 4%, 55%);
+  --body-color: hsl(var(--second-hue), 48%, 8%);
+  --container-color: hsl(var(--second-hue), 32%, 12%);
+}
+body {
+  background: #262626;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+.swiper-container {
+  width: 80%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 380px;
+  background: #fff;
+}
+.swiper-slide .imgBx {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.swiper-slide .imgBx img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-slide .details {
+  box-sizing: border-box;
+  font-size: 20px;
+  padding: 20px;
+}
+.swiper-slide .details h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+.swiper-slide .details h3 span {
+  font-size: 16px;
+  color: #f44336;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--body-color);
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+  transition: 0.4s;
+
+  width: 132px;
+  padding: 13px;
+  margin: 30px 0px;
+  position: relative;
+  right: -44%;
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+  color: var(--body-color);
+}
+
+.button--ghost {
+  background-color: transparent;
+  border: 2px solid var(--first-color);
+  color: var(--first-color);
+}
+
+.nav__menu1 {
+  position: fixed;
+  bottom: 2rem;
+  background-color: hsl(var(--second-hue), 32%, 3%, 0.8);
+  /* width: 90%; */
+  border-radius: 4rem;
+  padding: 0.75rem 1rem;
+  /* backdrop-filter: blur(10px); */
+  transition: 0.4s;
+}
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .nav__menu1 {
+    padding: 1rem auto;
+  }
+}
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .nav__menu1 {
+    width: 181px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
